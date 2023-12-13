@@ -1,0 +1,84 @@
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <!-- <ion-col></ion-col> -->
+      <ion-col>
+        <img src="../../assets/icon/favicon.png" alt="">
+      </ion-col>
+      <!-- <ion-col></ion-col> -->
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button (click)="clickConnection()">Connexion</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button (click)="clickInscription()">Inscription</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <form [formGroup]="connectionUser" >
+          <ion-card *ngIf="this.connectionSectionBool === true">
+            <ion-card-header>
+              <ion-card-title>Connexion</ion-card-title>
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-input label="Email" label-placement="floating" fill="solid" placeholder="Enter your email" type="email" formControlName="email"></ion-input>
+              <br>
+              <ion-input label="Password" label-placement="floating" fill="solid" placeholder="Enter your password" type="password" formControlName="password"></ion-input>
+              <br>
+              <ion-button (click)="sendConnectionUser()">Send</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngIf="this.inscriptionSectionBool === true">
+          <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+        
+              <ion-input label="Email" label-placement="floating" fill="solid" placeholder="Enter your email" type="email"></ion-input>
+              <br>
+              <ion-input label="Password" label-placement="floating" fill="solid" placeholder="Enter your password" type="password"></ion-input>
+              <br>
+              <ion-input label="Nom" label-placement="floating" fill="solid" placeholder="Enter votre nom" type="text"></ion-input>
+              <br>
+              <ion-input label="Prenom" label-placement="floating" fill="solid" placeholder="Enter votre prenom" type="text"></ion-input>
+              <br>
+              <ion-input label="Address" label-placement="floating" fill="solid" placeholder="Enter votre address" type="text"></ion-input>
+              <br>
+              <ion-button>Send</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
